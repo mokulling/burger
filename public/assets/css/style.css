@@ -1,10 +1,30 @@
 body {
     background-color: gold;
     
+    
 }
 
 h1 {
     text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
+}
+
+#buttonHolder {
+    margin-top: 15px;
+    display: block;
+    text-align: center;
+}
+
+.container {
+    max-width: 600px;
+}
+
+ul {
+    margin-top: 15px;
+}
+
+img {
+    background-color: gold;
+    text-align: center;
 }

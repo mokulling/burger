@@ -63,7 +63,7 @@ function printQuestionMarks(num) {
       var queryString = "UPDATE " + table;
   
       queryString += " SET ";
-      queryString += objToSql(objColVals);
+      queryString += objColVals;
       queryString += " WHERE ";
       queryString += condition;
   
@@ -75,7 +75,11 @@ function printQuestionMarks(num) {
   
         cb(result);
       });
-    }
+    },
+    
+  
+
+    
   };
   
   module.exports = orm;

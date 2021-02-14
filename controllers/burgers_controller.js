@@ -22,6 +22,21 @@ router.get("/", function(req, res) {
     })
     console.log(req.body)
   })
+
+  //Update put route with correct sql syntax 
+
+  router.put('/api/burger/:id', function(req,res) {
+    // console.log(req.params.id)
+    let id = req.params.id
+    burger.update([
+      "devoured = true"
+    ], [
+      `id = ${id}` 
+    ], function(result) {
+      res.json({id: result.insertId})
+    })
+  })
+
   
 
 
