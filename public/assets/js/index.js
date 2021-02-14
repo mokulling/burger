@@ -1,23 +1,26 @@
 $(function(){
     $('#btn').on('click', function(event){
         event.preventDefault()
-        let burger = {
+        let newBurger = {
             burger_name: $('#inpt').val(),
-            devoured: true,
+            devoured: false,
     
     }
 
         $.ajax('/api/burger', {
             type: 'POST',
-            data: burger,
-        }).then(
+            data: newBurger,
+        }).then(function () {            
+            location.reload();
             
-                console.log('Posted')
+            console.log('Posted')
         
-        )
+        })
         // console.log(event.target)
         // console.log($('#inpt').val())
-    })
+    });
+
+
 
 
 

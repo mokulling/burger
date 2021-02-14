@@ -16,7 +16,7 @@ router.get("/", function(req, res) {
     burger.create([
       "burger_name", "devoured"
     ], [
-      req.body.burger_name, true
+      req.body.burger_name, false
     ], function(result){
       res.json({id: result.insertId})
     })

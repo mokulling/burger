@@ -8,3 +8,18 @@
 <input id='inpt' type="text"></input>
 <button type="submit" id='btn'>Devour It!</button>
 
+
+
+<ul>
+    {{#each burger}}
+    <li>
+        Name: {{burger_name}}
+        {{#if devoured}}<button id="{{id}}">Devour it!</button>
+        {{/if}}
+        </li>
+        {{/each}}
+
+
+
+
+</ul>
