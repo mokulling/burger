@@ -1,10 +1,6 @@
-const mysql = require('mysql')
 const express = require('express');
 const exphbs  = require('express-handlebars');
 const PORT = process.env.PORT || 3000
-const connection = require('./config/connection')
-
-
 const app = express();
 
 app.use(express.urlencoded({ extended: true }));
