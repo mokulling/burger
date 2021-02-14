@@ -11,7 +11,20 @@ router.get("/", function(req, res) {
         res.render('index', hbsObject)
     })
   });
+
+  router.post('/api/burger', function(req, res){
+    burger.create([
+      "burger_name", "devoured"
+    ], [
+      req.body.burger_name, true
+    ], function(result){
+      res.json({id: result.insertId})
+    })
+    console.log(req.body)
+  })
   
+
+
 
 
 
